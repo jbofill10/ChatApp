@@ -1,0 +1,51 @@
+/*.LilGuy{
+    transform-origin: 0% 0% 0%
+}
+
+
+.LilGuy:hover{   
+    transform: all 1s ease;
+	-moz-transform: rotate(360deg) ;
+	-webkit-transform:  rotate(360deg);
+	-o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    
+    
+}*/
+.LilGuy{
+    background:rgb(248, 248, 248);
+    margin: 25px;
+    position: absolute;
+    width:500px;
+    height:500px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius:50px;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transform-origin: 0% 0% 0%;
+    
+}
+
+.LilGuy:hover{
+    background-color: rgb(255, 255, 255);
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 2s;
+    backface-visibility: hidden;
+}
+  /* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)};
+}
+    
+  /* Standard syntax */
+@keyframes example {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(1080deg)};
+}
