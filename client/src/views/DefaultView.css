@@ -35,7 +35,7 @@
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     backface-visibility: hidden;
 }
   /* Safari 4.0 - 8.0 */
@@ -46,6 +46,6 @@
     
   /* Standard syntax */
 @keyframes example {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(1080deg)};
+    from {transform: translate(-50%,-50%) rotate(0deg)}
+    to {transform: translate(-50%,-50%)rotate(1080deg)};
 }
