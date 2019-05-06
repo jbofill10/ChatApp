@@ -13,17 +13,19 @@ export default class DefaultView extends React.Component {
                     width:"100%",
                     position:"absolute",
                     overflow:"hidden"
+                    
                 }}>
                 <div
                     className="bg"
                     style={{
-                        background:"radial-gradient(#034FFF,#021645)",
+                        //background:"radial-gradient(#034FFF,#021645)",
                         position:"relative",
                         width:"100%",
                         height:"100%"
                         }}
                 />
-                <NavLink to="/join">
+                <NavLink to="/join"
+>
                     <div className="LilGuy">
 
                         <div 

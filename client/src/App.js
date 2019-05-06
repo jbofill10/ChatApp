@@ -7,16 +7,48 @@ import JoinView from './views/JoinView';
 function App() {
   return (
     <BrowserRouter>
+    <Route
+      render={({...props}) => (
+        <div className="HomeToJoin"
+          style={{
+            background:"radial-gradient(#034FFF,#021645)",
+            transition:"opacity 0.4s",
+            position:"absolute",
+            opacity: props.location.pathname !== "/" ? 0 : 1,
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            zIndex: 0
+          }}
+          />
+          <div className="JoinFromHome"
+          style={{
+            background:"radial-gradient(#034FFF,#021645)",
+            transition:"opacity 0.4s",
+            position:"absolute",
+            opacity: props.location.pathname !== "/" ? 1 : 0,
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            zIndex: 0
+          }}
+          ></div>
+          
+      )
+    }
+      ></Route>
     <div className="App"
     style={{
       overflow:"hidden"
+      
       }}
     >
     <Route
         exact
         path="/"
         component={DefaultView}
-        
     ></Route>
 
     <Route
@@ -25,6 +57,7 @@ function App() {
       component={JoinView}
       ></Route>
     </div>
+    
     </BrowserRouter>
   );
 }

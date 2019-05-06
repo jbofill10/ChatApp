@@ -9,15 +9,16 @@ export default class JoinView extends React.Component{
                 height:"100%",
                 width:"100%",
                 position:"absolute",
-                overflow:"hidden"
+                overflow:"hidden",
+                
             }}>
             <div
                 className="bg"
                 style={{
-                    background:"radial-gradient(#034FFF,#021645)",
-                    position:"relative",
-                    width:"100%",
-                    height:"100%"
+                        //background:"radial-gradient(#034FFF,#021645)",
+                        position:"relative",
+                        width:"100%",
+                        height:"100%"
                     }}
             />
             
