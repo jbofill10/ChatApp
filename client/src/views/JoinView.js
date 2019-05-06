@@ -1,5 +1,6 @@
 import React from 'react';
 import "./CSS/JoinView.css"
+import "whatwg-fetch";
 
 
 export default class JoinView extends React.Component{
@@ -8,12 +9,25 @@ export default class JoinView extends React.Component{
         super(props);
 
         this.state={
-            value:""
+            entry:""
         }
     }
 
     handleChange = event => {
-        this.setState({value:event.target.value});
+        this.setState({entry:event.target.value});
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Hello",this.state.entry)
+        
+        fetch("/join", {
+            headers: {
+				"Content-Type": "application/json"
+			},
+            method: 'POST',
+            body: this.state.entry
+        })
     }
     
     render(){
@@ -48,23 +62,24 @@ export default class JoinView extends React.Component{
                         borderRadius: "5px",
                         border: "5px solid #FFFF"
                     }}>
-                
-                    <input 
-                        type="displayName" 
-                        value={this.state.value} 
-                        onChange={this.handleChange}
-                        placeholder="Display Name" 
-                        style={{
-                            position:"absolute",
-                            width:"200px",
-                            height:"30px",
-                            borderRadius:"5px",
-                            top:"45%",
-                            left:"50%",
-                            transform:"translate(-50%,-50%)",
-                            }}>
-
+                    <form onSubmit={this.handleSubmit}>
+                        <input 
+                            type="displayName" 
+                            value={this.state.entry} 
+                            onChange={this.handleChange}
+                            placeholder="Display Name" 
+                            style={{
+                                position:"absolute",
+                                width:"200px",
+                                height:"30px",
+                                borderRadius:"5px",
+                                top:"45%",
+                                left:"50%",
+                                transform:"translate(-50%,-50%)",
+                                }}>
+                        
                         </input>
+                    </form>
                     
                     
 
