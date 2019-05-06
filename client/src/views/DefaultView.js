@@ -1,5 +1,5 @@
 import React from 'react';
-import './DefaultView.css'
+import './CSS/DefaultView.css'
 import {NavLink} from 'react-router-dom';
 
 export default class DefaultView extends React.Component {
@@ -18,7 +18,7 @@ export default class DefaultView extends React.Component {
                 <div
                     className="bg"
                     style={{
-                        //background:"radial-gradient(#034FFF,#021645)",
+                        background:"radial-gradient(#034FFF,#021645)",
                         position:"relative",
                         width:"100%",
                         height:"100%"
