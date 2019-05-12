@@ -1,7 +1,8 @@
 {
   "scripts": {
     "client-dev": "cd client && npm start",
-    "server-dev": "cd server && npm start"
+    "server-dev": "cd server && npm start",
+    "start": "cd server %% npm start"
   },
   "dependencies": {
     "whatwg-fetch": "^3.0.0"
