@@ -16,7 +16,7 @@ export default class ChatView extends React.Component{
 
     componentDidMount(){
         this._isMouted = true;
-        this.socket = clientSocket("http://localhost:3000")
+        this.socket = clientSocket(process.env.NODE_ENV==="development" ? window.location.hostname + ":3000":null)
         this.socket.on("connect", () =>{
             console.log("connected"); 
 
