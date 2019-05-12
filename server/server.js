@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 const server = app.listen(port, () => console.log(`listening on port ${port}`));
 
 // Hello world route
-app.get("/", (req,res)=> res.send(""))
 
 // full path to this file as an array
 let fullpath = path.dirname(__filename).split(path.sep);
