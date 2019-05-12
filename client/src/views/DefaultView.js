@@ -24,7 +24,7 @@ export default class DefaultView extends React.Component {
                         height:"100%"
                         }}
                 />
-                <NavLink to="/join"
+                <NavLink to="/chat"
 >
                     <div className="LilGuy">
 

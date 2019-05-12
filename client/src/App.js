@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Route,BrowserRouter} from 'react-router-dom'
 import DefaultView from './views/DefaultView';
-import JoinView from './views/JoinView';
+import ChatView from './views/ChatView';
 
 function App() {
   return (
@@ -32,7 +32,6 @@ function App() {
     <div className="App"
     style={{
       overflow:"hidden"
-      
       }}
     >
     <Route
@@ -42,9 +41,8 @@ function App() {
     ></Route>
 
     <Route
-      exact
-      path="/join"
-      component={JoinView}
+      exact path="/chat"
+      component={ChatView}
       ></Route>
     </div>
     
