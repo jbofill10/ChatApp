@@ -4,7 +4,11 @@
     "server-dev": "cd server && npm start",
     "start": "cd server && npm start",
     "build-server":"cd server && npm run build",
-    "build-client":"cd client && npm run build"
+    "build-client":"cd client && npm run build",
+    "heroku-prebuild": "npm run client-install && npm run server-install",
+    "heroku-postbuild": "cd client && npm run build",
+    "client-install": "cd client && npm i",
+    "server-install": "cd server && npm i"
   },
   "dependencies": {
     "whatwg-fetch": "^3.0.0"
