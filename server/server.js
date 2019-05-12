@@ -51,8 +51,6 @@ io.on("connect", (socket)=>{
             name:users[socket.id],
             body:data
         }
-        chat.messages.push(message);
-        console.log(message)
         io.emit("send message",message);
     })
 

@@ -18,7 +18,6 @@ export default class ChatView extends React.Component{
         this._isMouted = true;
         this.socket = clientSocket(process.env.NODE_ENV==="development" ? window.location.hostname + ":3000":null)
         this.socket.on("connect", () =>{
-            console.log("connected"); 
 
             this.socket.on("get messages", messages =>{
                 this.setState({messages:messages.messages})
@@ -50,10 +49,6 @@ export default class ChatView extends React.Component{
     handleSubmit = (e) =>{
         e.preventDefault();
         this.sendMessage();
-        this.state.tester.map((messages, key) => (
-            console.log(messages.name,messages.body)
-        ))
-        console.log(this.state.messages)
         
     }
 
