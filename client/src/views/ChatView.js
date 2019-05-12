@@ -7,7 +7,6 @@ export default class ChatView extends React.Component{
         this.state={
             entry:"",
             messages:[],
-            tester:[{name: "Rich", body:"Hey"},{name:"Alex", body:"Glulp"}],
             user:""
         }
 
